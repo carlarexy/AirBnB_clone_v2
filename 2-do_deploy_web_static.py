@@ -17,9 +17,9 @@ def do_deploy(archive_path):
         try:
             put(archive_path, "/tmp/")
             """ putting the file to .tgz """
-            file_name = archive_path.split("/")[2]
+            file_name = archive_path.split("/")[1]
             """ splitting .tgz """
-            file_name2 = file_name.split(".")[1]
+            file_name2 = file_name.split(".")[0]
             """ spliting archivo """
             final_name = "/data/web_static/releases/" + file_name2 + "/"
             run("mkdir -p " + final_name)
